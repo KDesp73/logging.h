@@ -23,7 +23,11 @@ wget https://github.com/KDesp73/logging.h/blob/main/logging.h
 
 int main(){
     const char* ip = "127.0.0.1";
+    const char* username = "!user";
+
     INFO("IP: %s\n", ip);
+    WARN("Address is local\n");
+    ERRO("Username \'%s\' contains special characters", username);
 
     return 0; 
 }
@@ -32,6 +36,8 @@ int main(){
 Output:
 ```
 [INFO] IP: 127.0.0.1
+[WARN] Address is local
+[ERRO] Username '!user' contains special characters
 ```
 
 
